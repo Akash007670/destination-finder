@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Button from "./Button";
+import "./Navbar.css";
 
 const Navabar = () => {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
 
   const onMobileClick = () => setClick(false);
 
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  window.addEventListener("resize", showButton);
+
   return (
     <>
-      <nav className="Navbar">
+      <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            TravL <i class="fas fa-plane-departure"></i>
+            TRAVL<i className="fas fa-plane-departure"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars "} />
@@ -52,6 +65,7 @@ const Navabar = () => {
               </Link>
             </li>
           </ul>
+          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
       </nav>
     </>
