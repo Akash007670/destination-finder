@@ -21,10 +21,10 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 1px;
+  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
 }
@@ -41,7 +41,7 @@
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: start;
   margin-right: 2rem;
 }
 
