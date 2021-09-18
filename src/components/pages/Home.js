@@ -1,6 +1,7 @@
 import React from "react";
 import "../../App.css";
 import Card from "../Card";
+import Footer from "../Footer";
 import HeroSection from "../HeroSection";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <>
       <HeroSection />
       <Card />
+      <Footer />
     </>
   );
 };
